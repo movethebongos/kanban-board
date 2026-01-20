@@ -2,47 +2,47 @@
 
 A modern, feature-complete Kanban board application built with React, TypeScript, and Zustand. Features drag-and-drop task management, real-time filtering, smooth animations, and persistent localStorage.
 
-## ✨ Features
+## Features
 
-### Core Functionality ✅
-- ✅ **Create & manage multiple lists** - Add, edit, and delete task lists
-- ✅ **Task CRUD operations** - Create, read, update, delete tasks with titles and descriptions
-- ✅ **Kanban-style board layout** - Visual columns with horizontal scrolling
-- ✅ **Drag & drop** - Smooth task movement between and within lists
-- ✅ **Real-time filtering** - Filter tasks across all lists by name or description
-- ✅ **List sorting** - Sort tasks by name, creation date, or last updated
-- ✅ **Persistent storage** - All data saves to localStorage automatically
+### Core Functionality
+- Create & manage multiple lists - Add, edit, and delete task lists
+- Task CRUD operations - Create, read, update, delete tasks with titles and descriptions
+- Kanban-style board layout - Visual columns with horizontal scrolling
+- Drag & drop - Smooth task movement between and within lists
+- Real-time filtering - Filter tasks across all lists by name or description
+- List sorting - Sort tasks by name, creation date, or last updated
+- Persistent storage - All data saves to localStorage automatically
 
-### Technical Highlights 🚀
-- ✅ **TypeScript** - Full type safety throughout the application
-- ✅ **Modern React** - Hooks, functional components, and best practices
-- ✅ **State management** - Zustand for clean, scalable state management
-- ✅ **Drag & drop** - React Beautiful DnD with conflict-free animations
-- ✅ **Spring animations** - Framer Motion for snappy page load effects
-- ✅ **Responsive design** - Works on desktop and mobile devices
-- ✅ **Accessibility** - Keyboard navigation and proper ARIA attributes
-- ✅ **Clean architecture** - Feature-based folder structure
-- ✅ **Comprehensive testing** - Unit tests for critical functionality
+### Technical Highlights
+- TypeScript - Full type safety throughout the application
+- Modern React - Hooks, functional components, and best practices
+- State management - Zustand for clean, scalable state management
+- Drag & drop - React Beautiful DnD with conflict-free animations
+- Spring animations - Framer Motion for snappy page load effects
+- Responsive design - Works on desktop and mobile devices
+- Accessibility - Keyboard navigation and proper ARIA attributes
+- Clean architecture - Feature-based folder structure
+- Comprehensive testing - Unit tests for critical functionality
 
 ## Features
 
-### Core Requirements ✅
-- ✅ Add new lists
-- ✅ Add tasks with name and description to specific lists
-- ✅ Delete tasks
-- ✅ View all lists in different columns (Kanban-style)
-- ✅ Name/edit lists
-- ✅ Update task name and description
-- ✅ Delete lists
+### Core Requirements
+- Add new lists
+- Add tasks with name and description to specific lists
+- Delete tasks
+- View all lists in different columns (Kanban-style)
+- Name/edit lists
+- Update task name and description
+- Delete lists
 
-### Plus Points ✅
-- ✅ Sort specific lists (by name, creation date, or last updated)
-- ✅ Filter all tasks across all lists by name or description
-- ✅ Transfer/move items between lists (via drag and drop)
-- ✅ Drag and drop tasks within and between lists
-- ✅ State management with Zustand
-- ✅ Modern, clean UI with Tailwind CSS
-- ✅ Unit tests for core functionality
+### Plus Points
+- Sort specific lists (by name, creation date, or last updated)
+- Filter all tasks across all lists by name or description
+- Transfer/move items between lists (via drag and drop)
+- Drag and drop tasks within and between lists
+- State management with Zustand
+- Modern, clean UI with Tailwind CSS
+- Unit tests for core functionality
 
 ### Technical Highlights
 - **TypeScript** for type safety and better developer experience
@@ -166,7 +166,7 @@ The idea is that `components/` has the reusable stuff that doesn't know anything
 
 ## Design Decisions
 
-Here's why I chose what I chose - I thought about this quite a bit since the prompt mentioned they'd be looking at technical decisions.
+Here's why I chose what I chose - I thought about this quite a bit since the prompt mentioned you'd be looking at technical decisions.
 
 ### Why Zustand over Redux?
 Honestly, Redux would have been overkill for this project. Zustand gives me all the state management I need with way less boilerplate - we're talking ~1KB vs Redux's ~10KB+. The TypeScript support is great, and since this was a 6-hour project, I wanted something I could set up quickly without sacrificing quality.
@@ -225,7 +225,7 @@ Click "+ Add List" at the top, type a name, hit Enter. Done.
 In any list, click "+ Add Task", type a name (you can add a description too if you want), and hit Enter.
 
 ### Editing a Task
-Click the edit icon (✏️) on any task card, change what you need, then Save. Press Escape to cancel.
+Click the edit icon on any task card, change what you need, then Save. Press Escape to cancel.
 
 ### Moving Tasks Around
 Just drag and drop them! You can move tasks between lists or reorder them within the same list. It works with keyboard navigation too if that's your thing.
@@ -237,7 +237,7 @@ Type something in the search box at the top and it'll filter all tasks across al
 Each list has a sort dropdown in its header. You can sort by name, creation date, or last updated. Or turn sorting off entirely.
 
 ### Deleting Things
-Click the trash icon (🗑️) - tasks have it on the card, lists have it in the header. It'll ask for confirmation so you don't accidentally delete something.
+Click the trash icon - tasks have it on the card, lists have it in the header. It'll ask for confirmation so you don't accidentally delete something.
 
 ## Browser Support
 
@@ -254,7 +254,7 @@ The application is optimized for smooth performance:
 - **Lightweight bundle** - ~364KB total (116KB gzipped)
 - **Fast startup** - Vite HMR for instant development updates
 
-## What's Included ✅
+## What's Included
 
 This application demonstrates professional-level development practices:
 
