@@ -267,5 +267,7 @@ The application successfully implements all requirements while showcasing advanc
 
 ---
 
+**Note:** This README was written with the assistance of Large Language Models (LLMs) to ensure clear, comprehensive documentation.
+
 **Ready to run:** Just execute the setup scripts or follow the installation guide above!
 
