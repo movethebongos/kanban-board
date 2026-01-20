@@ -4,28 +4,6 @@ A modern, feature-complete Kanban board application built with React, TypeScript
 
 ## Features
 
-### Core Functionality
-- Create & manage multiple lists - Add, edit, and delete task lists
-- Task CRUD operations - Create, read, update, delete tasks with titles and descriptions
-- Kanban-style board layout - Visual columns with horizontal scrolling
-- Drag & drop - Smooth task movement between and within lists
-- Real-time filtering - Filter tasks across all lists by name or description
-- List sorting - Sort tasks by name, creation date, or last updated
-- Persistent storage - All data saves to localStorage automatically
-
-### Technical Highlights
-- TypeScript - Full type safety throughout the application
-- Modern React - Hooks, functional components, and best practices
-- State management - Zustand for clean, scalable state management
-- Drag & drop - React Beautiful DnD with conflict-free animations
-- Spring animations - Framer Motion for snappy page load effects
-- Responsive design - Works on desktop and mobile devices
-- Accessibility - Keyboard navigation and proper ARIA attributes
-- Clean architecture - Feature-based folder structure
-- Comprehensive testing - Unit tests for critical functionality
-
-## Features
-
 ### Core Requirements
 - Add new lists
 - Add tasks with name and description to specific lists
@@ -35,7 +13,7 @@ A modern, feature-complete Kanban board application built with React, TypeScript
 - Update task name and description
 - Delete lists
 
-### Plus Points
+### Advanced Features
 - Sort specific lists (by name, creation date, or last updated)
 - Filter all tasks across all lists by name or description
 - Transfer/move items between lists (via drag and drop)
