@@ -12,7 +12,57 @@ const generateId = (): string => {
 export const useBoardStore = create<BoardState>()(
   persist(
     (set) => ({
-      lists: [],
+      lists: [
+        {
+          id: 'list-1',
+          name: 'To Do',
+          createdAt: Date.now() - 100000,
+          tasks: [
+            {
+              id: 'task-1',
+              name: 'Try the Kanban Board',
+              description: 'Explore the features and move this card around!',
+              createdAt: Date.now() - 90000,
+              updatedAt: Date.now() - 90000,
+            },
+            {
+              id: 'task-2',
+              name: 'Add your own tasks',
+              description: 'Click "+ Add Task" to create a new task.',
+              createdAt: Date.now() - 80000,
+              updatedAt: Date.now() - 80000,
+            },
+          ],
+        },
+        {
+          id: 'list-2',
+          name: 'In Progress',
+          createdAt: Date.now() - 70000,
+          tasks: [
+            {
+              id: 'task-3',
+              name: 'Drag tasks here',
+              description: 'Move tasks between columns by dragging and dropping.',
+              createdAt: Date.now() - 60000,
+              updatedAt: Date.now() - 60000,
+            },
+          ],
+        },
+        {
+          id: 'list-3',
+          name: 'Done',
+          createdAt: Date.now() - 50000,
+          tasks: [
+            {
+              id: 'task-4',
+              name: 'Enjoy productivity!',
+              description: 'Mark tasks as done by moving them here.',
+              createdAt: Date.now() - 40000,
+              updatedAt: Date.now() - 40000,
+            },
+          ],
+        },
+      ],
       filterQuery: '',
 
       addList: (name: string) => {
