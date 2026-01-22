@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
-import { motion } from 'framer-motion';
 import { useBoardStore } from '../../../store/useBoardStore';
 import { ListColumn } from './ListColumn';
 import { Button } from '../../../components/Button';
@@ -44,21 +43,16 @@ export const KanbanBoard: React.FC = () => {
   };
 
   return (
-    <motion.div
-      className="min-h-screen bg-background p-6"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.2 }}
+    <div
+      className="min-h-screen bg-background p-6 page-background"
     >
       <div className="max-w-full mb-6">
-        <AnimatedContainer delay={0.1} className="mb-4">
-          <h1 className="text-3xl font-bold text-primary-dark">
-            Kanban Task Board
-          </h1>
-        </AnimatedContainer>
+        <h1 className="text-3xl font-bold text-primary-dark">
+          BECAUSE WE KANBAN-CAN!
+        </h1>
 
         {/* Filter and Add List Controls */}
-        <AnimatedContainer delay={0.2} className="flex gap-4 items-center mb-4 flex-wrap">
+        <div className="flex gap-4 items-center mb-4 flex-wrap">
           <div className="flex-1 min-w-[200px]">
             <Input
               value={filterQuery}
@@ -82,7 +76,7 @@ export const KanbanBoard: React.FC = () => {
                   }
                 }}
                 autoFocus
-                className="w-48"
+                className="w-48 name-input"
               />
               <Button size="md" onClick={handleAddList}>
                 Add
@@ -103,7 +97,7 @@ export const KanbanBoard: React.FC = () => {
               + Add List
             </Button>
           )}
-        </AnimatedContainer>
+        </div>
       </div>
 
       {/* Board */}
@@ -122,19 +116,11 @@ export const KanbanBoard: React.FC = () => {
             {lists.map((list, index) => (
               <ListColumn key={list.id} list={list} index={index} />
             ))}
-            {!isAddingList && (
-              <AnimatedContainer delay={0.3 + lists.length * 0.15}>
-                <button
-                  onClick={() => setIsAddingList(true)}
-                  className="flex-shrink-0 w-80 bg-accent-teal hover:bg-primary-light rounded-lg p-4 mr-4 transition-colors text-primary-dark font-medium border-2 border-dashed border-primary"
-                >
-                  + Add Another List
-                </button>
-              </AnimatedContainer>
-            )}
+
           </div>
         </DragDropContext>
       )}
-    </motion.div>
+    </div>
   );
 };
+

@@ -1,41 +1,40 @@
-# Kanban Task Board
 
-A modern, feature-complete Kanban board application built with React, TypeScript, and Zustand. Features drag-and-drop task management, real-time filtering, smooth animations, and persistent localStorage.
+# Kanban Board
+
+A visually bold, modern Kanban board app for managing tasks in lists, built with React, TypeScript, Zustand, and Tailwind CSS. It features drag-and-drop task management, real-time filtering, smooth animations, and persistent localStorage. The project is structured for scalability and maintainability, with a focus on developer experience and performance.
+
 
 ## Features
 
-### Core Requirements
-- Add new lists
-- Add tasks with name and description to specific lists
-- Delete tasks
-- View all lists in different columns (Kanban-style)
-- Name/edit lists
-- Update task name and description
-- Delete lists
-
-### Advanced Features
-- Sort specific lists (by name, creation date, or last updated)
-- Filter all tasks across all lists by name or description
-- Transfer/move items between lists (via drag and drop)
+### Core
+- Add, edit, and delete lists (columns)
+- Add, edit, and delete tasks (with name and description)
 - Drag and drop tasks within and between lists
-- State management with Zustand
-- Modern, clean UI with Tailwind CSS
-- Unit tests for core functionality
+- Rename lists and update task details
+- Delete lists and tasks with confirmation
 
-### Technical Highlights
-- **TypeScript** for type safety and better developer experience
-- **LocalStorage persistence** - all data automatically saved and restored
-- **Responsive design** - works on desktop and mobile devices
-- **Accessible UI** - keyboard navigation and proper ARIA attributes
-- **Snappy page load animations** - elements fall down from above screen with spring physics
-- **Clean drag & drop** - smooth, unencumbered drag and drop operations
-- **No animation conflicts** - drag and drop works exactly as expected
+### Advanced
+- Sort tasks in each list (by name, created, or updated)
+- Filter all tasks across all lists by name or description
+- Persistent state with localStorage (using Zustand middleware)
+- Responsive, accessible UI (keyboard navigation, ARIA attributes)
+- Modern, bold UI with Tailwind CSS and custom styles
+- Smooth, spring-physics animations and clean drag-and-drop
+- Unit tests for store logic and custom hooks
 
-## Installation
+### Technical
+- TypeScript throughout for safety and DX
+- Vite for fast development and builds
+- Zustand for simple, scalable state management
+- @hello-pangea/dnd for accessible drag-and-drop
+- Feature-based folder structure for scalability
 
-### Quick Setup (Easiest Way)
 
-I've included some setup scripts to make things easier:
+## Getting Started
+
+### Quick Setup
+
+Scripts are provided for easy setup:
 
 **Windows PowerShell:**
 ```powershell
@@ -47,45 +46,37 @@ I've included some setup scripts to make things easier:
 setup.bat
 ```
 
-These scripts will check if you have Node.js, install everything, run the tests, and tell you what to do next.
+These scripts check for Node.js, install dependencies, run tests, and start the app.
 
-**Quick note:** If PowerShell gives you an execution policy error, just run this first:
+If you get a PowerShell execution policy error, run:
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### Manual Setup (If You Prefer)
+### Manual Setup
 
-1. **Get Node.js installed** (if you don't have it already)
-   - Download it from [nodejs.org](https://nodejs.org/) - grab the LTS version
-   - Make sure it worked: `node --version` and `npm --version` should show versions
-
-2. **Clone and navigate**
+1. Install Node.js (LTS) from [nodejs.org](https://nodejs.org/)
+2. Clone the repo and enter the folder:
    ```bash
    git clone <repository-url>
    cd kanban-board
    ```
-
-3. **Install the dependencies**
+3. Install dependencies:
    ```bash
    npm install
    ```
-
-4. **Start it up**
+4. Start the dev server:
    ```bash
    npm run dev
    ```
-   
-   Or if you want to use the scripts I made:
+   Or use the provided scripts:
    ```powershell
    .\start-dev.ps1
    ```
    ```batch
    start-dev.bat
    ```
-
-5. **Open it in your browser**
-   Usually `http://localhost:5173` - Vite will tell you the exact port in the terminal
+5. Open your browser to the address shown in the terminal (usually http://localhost:5173)
 
 ## Available Scripts
 
@@ -253,21 +244,14 @@ While the core application is complete and polished, potential future features c
 - **UI enhancements** - Dark mode, themes, custom styling
 - **Mobile app** - React Native companion application
 
+
 ## About
 
-This Kanban board application was built as a technical assessment to demonstrate:
-
-- **Full-stack React development** with modern patterns and practices
-- **Complex state management** with drag-and-drop interactions
-- **Smooth animations** without performance compromises
-- **Clean, maintainable code** with comprehensive testing
-- **Professional project structure** and documentation
-
-The application successfully implements all requirements while showcasing advanced React development skills, from atomic design components to sophisticated animation systems.
+This Kanban board was built to demonstrate modern React, TypeScript, and state management patterns, with a focus on clean architecture, maintainability, and a bold, accessible UI. It implements all core and advanced requirements for a professional Kanban/task board, and is ready for further extension.
 
 ---
 
-**Note:** This README was written with the assistance of Large Language Models (LLMs) to ensure clear, comprehensive documentation.
+**Note:** Large Language Models (LLMs) were used throughout development to squash bugs, fix syntax, and research modern web code libraries. LLMs also assisted in writing and reviewing documentation.
 
 **Ready to run:** Just execute the setup scripts or follow the installation guide above!
 

@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         primary: {
-          dark: '#320e3b',
+          dark: '#000000',
           DEFAULT: '#7f96ff',
           hover: '#e56399',
           light: '#a6cfd5',
@@ -18,8 +18,8 @@ export default {
           light: '#f5feff',
         },
         text: {
-          dark: '#320e3b',
-          DEFAULT: '#320e3b',
+          dark: '#000000',
+          DEFAULT: '#000000',
           light: '#666',
         },
         accent: {

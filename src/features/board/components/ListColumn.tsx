@@ -6,7 +6,6 @@ import { Button } from '../../../components/Button';
 import { Input } from '../../../components/Input';
 import { Textarea } from '../../../components/Textarea';
 import { useFilteredTasks } from '../../../hooks/useFilteredTasks';
-import { AnimatedContainer } from '../../../components/AnimatedContainer';
 import type { List as ListType } from '../../../types';
 
 interface ListColumnProps {
@@ -59,11 +58,11 @@ export const ListColumn: React.FC<ListColumnProps> = ({ list, index = 0 }) => {
   };
 
   return (
-    <AnimatedContainer delay={0.5 + index * 0.15} className="flex-shrink-0 w-80 bg-white rounded-lg p-4 mr-4 shadow-md border border-accent-teal">
+    <div className="list-column">
       {/* List Header */}
       <div className="mb-4">
         {isEditingName ? (
-          <AnimatedContainer delay={0.1}>
+          <div>
             <div className="flex gap-2">
               <Input
                 value={listName}
@@ -82,53 +81,51 @@ export const ListColumn: React.FC<ListColumnProps> = ({ list, index = 0 }) => {
                 ✓
               </Button>
             </div>
-          </AnimatedContainer>
+          </div>
         ) : (
           <div className="flex justify-between items-center mb-2">
-            <AnimatedContainer delay={0.6 + index * 0.15}>
+            <div>
               <h2
-                className="text-lg font-bold text-primary-dark cursor-pointer hover:text-primary transition-colors"
+                className="text-lg font-bold text-primary-dark cursor-pointer hover:text-primary transition-colors list-title"
                 onClick={() => setIsEditingName(true)}
                 title="Click to edit"
               >
                 {list.name}
               </h2>
-            </AnimatedContainer>
-            <AnimatedContainer delay={0.7 + index * 0.15}>
+            </div>
+            <div className="flex gap-0 ml-2 lb task-buttons">
               <button
                 onClick={handleDeleteList}
-                className="text-accent-teal hover:text-accent-pink transition-colors"
+                className="text-accent-teal hover:text-accent-pink transition-colors list-delete-btn"
                 title="Delete list"
               >
                 🗑️
               </button>
-            </AnimatedContainer>
+            </div>
           </div>
         )}
 
         {/* Sort Controls */}
-        <AnimatedContainer delay={0.65 + index * 0.15} className="flex gap-2 items-center">
+        <div className="flex gap-4 items-center">
           <select
             value={list.sortOrder || ''}
             onChange={handleSortChange}
-            className="text-xs px-2 py-1 border border-accent-teal rounded focus:outline-none focus:ring-1 focus:ring-primary bg-background-light"
+            className="sort-dropdown"
           >
             <option value="">No sort</option>
             <option value="name">Sort by name</option>
             <option value="created">Sort by created</option>
             <option value="updated">Sort by updated</option>
           </select>
-          <AnimatedContainer delay={0.7 + index * 0.15}>
-            <span className="text-xs text-text-light">
-              {list.tasks.length} task{list.tasks.length !== 1 ? 's' : ''}
-            </span>
-          </AnimatedContainer>
-        </AnimatedContainer>
+          <span className="task-count">
+            {list.tasks.length} task{list.tasks.length !== 1 ? 's' : ''}
+          </span>
+        </div>
       </div>
 
       {/* Add Task Form */}
       {isAddingTask ? (
-        <AnimatedContainer delay={0.1} className="mb-4 p-3 bg-white rounded-lg shadow-sm space-y-2">
+        <div>
           <Input
             value={taskName}
             onChange={(e) => setTaskName(e.target.value)}
@@ -163,18 +160,18 @@ export const ListColumn: React.FC<ListColumnProps> = ({ list, index = 0 }) => {
               Cancel
             </Button>
           </div>
-        </AnimatedContainer>
+        </div>
       ) : (
-        <AnimatedContainer delay={0.75 + index * 0.15}>
+        <div>
           <Button
             size="sm"
             variant="secondary"
             onClick={() => setIsAddingTask(true)}
-            className="w-full mb-4"
+            className="w-full mb-4 add-task-btn"
           >
             + Add Task
           </Button>
-        </AnimatedContainer>
+        </div>
       )}
 
       {/* Tasks List */}
@@ -183,17 +180,16 @@ export const ListColumn: React.FC<ListColumnProps> = ({ list, index = 0 }) => {
           <div
             ref={provided.innerRef}
             {...provided.droppableProps}
-            className={`
-              min-h-[100px] max-h-[calc(100vh-300px)] overflow-y-auto
+            className={`droppable-container min-h-[180px] max-h-[calc(100vh-200px)] overflow-y-auto
               ${snapshot.isDraggingOver ? 'bg-background rounded-lg border-2 border-dashed border-primary' : ''}
             `}
           >
             {filteredTasks.length === 0 ? (
-              <AnimatedContainer delay={0.8 + index * 0.15}>
+              <div>
                 <div className="text-center text-text-light py-8 text-sm">
                   {filterQuery ? 'No tasks match the filter' : 'No tasks yet'}
                 </div>
-              </AnimatedContainer>
+              </div>
             ) : (
               filteredTasks.map((task, taskIndex) => {
                 const originalIndex = list.tasks.findIndex((t) => t.id === task.id);
@@ -211,6 +207,6 @@ export const ListColumn: React.FC<ListColumnProps> = ({ list, index = 0 }) => {
           </div>
         )}
       </Droppable>
-    </AnimatedContainer>
+    </div>
   );
 };
