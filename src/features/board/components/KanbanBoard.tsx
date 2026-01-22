@@ -112,8 +112,8 @@ export const KanbanBoard: React.FC = () => {
       ) : (
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="flex overflow-x-auto pb-4" style={{ scrollbarWidth: 'thin' }}>
-            {lists.map((list, index) => (
-              <ListColumn key={list.id} list={list} index={index} />
+            {lists.map((list) => (
+              <ListColumn key={list.id} list={list} />
             ))}
 
           </div>
