@@ -1,5 +1,8 @@
 
+
 # Kanban Board
+
+**Live Demo:** https://kanban-board-morning-dream-2848.fly.dev/
 
 A visually bold, modern Kanban board app for managing tasks in lists, built with React, TypeScript, Zustand, and Tailwind CSS. It features drag-and-drop task management, real-time filtering, smooth animations, and persistent localStorage. The project is structured for scalability and maintainability, with a focus on developer experience and performance.
 
