@@ -10,10 +10,9 @@ import type { List as ListType } from '../../../types';
 
 interface ListColumnProps {
   list: ListType;
-  index?: number;
 }
 
-export const ListColumn: React.FC<ListColumnProps> = ({ list, index = 0 }) => {
+export const ListColumn: React.FC<ListColumnProps> = ({ list }) => {
   const [isAddingTask, setIsAddingTask] = useState(false);
   const [taskName, setTaskName] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
