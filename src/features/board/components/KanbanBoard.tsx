@@ -4,7 +4,6 @@ import { useBoardStore } from '../../../store/useBoardStore';
 import { ListColumn } from './ListColumn';
 import { Button } from '../../../components/Button';
 import { Input } from '../../../components/Input';
-import { AnimatedContainer } from '../../../components/AnimatedContainer';
 
 export const KanbanBoard: React.FC = () => {
   const [isAddingList, setIsAddingList] = useState(false);
